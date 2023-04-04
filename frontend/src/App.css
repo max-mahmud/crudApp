@@ -1,0 +1,9 @@
+.btn, input{
+    border-radius: 0 !important;
+}
+.navbar-nav a{
+    text-decoration: none;
+    color: aliceblue !important;
+    margin-left: 20px;
+    font-size: 18px;
+}
