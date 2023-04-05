@@ -14,7 +14,7 @@ const Edit = () => {
 
   useEffect(() => {
     const getAllData = async () => {
-      const res = await axios.get(`https://crudapp2023.onrender.com/user/${id}`);
+      const res = await axios.get(`http://localhost:4500/user/${id}`);
       setInput(res.data);
     };
     getAllData();
@@ -29,7 +29,7 @@ const Edit = () => {
 
   const handleEditData = async (e) => {
     e.preventDefault();
-    await axios.patch(`https://crudapp2023.onrender.com/user/${id}`, input);
+    await axios.patch(`http://localhost:4500/user/${id}`, input);
     navigate("/");
   };
   return (

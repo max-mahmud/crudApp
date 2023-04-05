@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors())
 
 
-app.use('https://crudapp2023.onrender.com/', router)
+app.use('/', router)
 
 const port = process.env.PORT || 4000
 
