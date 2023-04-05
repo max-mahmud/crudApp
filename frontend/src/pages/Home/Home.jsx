@@ -16,7 +16,7 @@ const Home = () => {
   });
   useEffect(() => {
     const getAllData = async () => {
-      const res = await axios.get("http://localhost:4500/user/");
+      const res = await axios.get("https://crudapp2023.onrender.com/user/");
       setUsers(res.data);
     };
     getAllData();
@@ -24,7 +24,7 @@ const Home = () => {
 // Create User
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4500/user/", input);
+    await axios.post("https://crudapp2023.onrender.com/user/", input);
     setRender(true);
     setInput({
       name: "",
@@ -40,7 +40,7 @@ const Home = () => {
   };
 //   DeleteUser
   const handelDelete = async (id) => {
-    await axios.delete(`http://localhost:4500/user/${id}`);
+    await axios.delete(`https://crudapp2023.onrender.com/user/${id}`);
     const newUsers = users.filter((item) => {
       return item._id !== id;
     });
